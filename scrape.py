@@ -6,11 +6,11 @@ import praw
 import pandas as pd
 
 # authenticate
-reddit = praw.Reddit(client_id='Y7u_AYSGyGm-Fw',
-                     client_secret='OY77GlYJoEZOapz_HAUxnEZrelw',
+reddit = praw.Reddit(client_id='REDACTED',
+                     client_secret='REDACTED',
                      password='reddit',
-                     user_agent='complainer by /u/sketchyuser25',
-                     username='sketchyuser25')
+                     user_agent='complainer by /u/REDACTED_USERNAME',
+                     username='REDACTED')
 
 # id - id of submission
 # score - number of upvotes on submission

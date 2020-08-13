@@ -35,13 +35,6 @@ def tokenize(text):
             lda_tokens.append(token.lower_)
     return lda_tokens
 
-# stem words (remove if not used), got from https://stackabuse.com/python-for-nlp-tokenization-stemming-and-lemmatization-with-spacy-library/
-from nltk.stem.snowball import SnowballStemmer
-stemmer = SnowballStemmer(language='english')
-
-def stem_word(word):
-    return stemmer.stem(word)
-
 # get root word (get lemma)
 import spacy
 sp = spacy.load('en_core_web_sm')
@@ -66,7 +59,7 @@ def process_document(text):
 
 # open csv file containing documents, clean document, add to all_docs list
 all_docs = []
-with open('complaints_body_only.csv') as f:
+with open('complaints_title_only.csv') as f:
     for line in f:
         tokens = process_document(line)
         all_docs.append(tokens)
@@ -83,8 +76,8 @@ for doc in all_docs:
 
 # save dictionary and corpus for future use
 import pickle
-pickle.dump(corpus, open('corpus_1.pkl', 'wb'))
-dictionary.save('dictionary_1.gensim')
+pickle.dump(corpus, open('corpus_title.pkl', 'wb'))
+dictionary.save('dictionary_title.gensim')
 
 # Train LDA model
 from gensim.models import LdaModel
@@ -92,7 +85,7 @@ num_topics = 10 # find this number of topics in the data
 passes = 15
 
 ldamodel = LdaModel(corpus, num_topics = num_topics, id2word=dictionary, passes=passes)
-ldamodel.save('model10_1.gensim')
+ldamodel.save('model10_title.gensim')
 topics = ldamodel.print_topics(num_words=5)
 
 for topic in topics:
