@@ -83,8 +83,8 @@ for doc in all_docs:
 
 # save dictionary and corpus for future use
 import pickle
-pickle.dump(corpus, open('corpus.pkl', 'wb'))
-dictionary.save('dictionary.gensim')
+pickle.dump(corpus, open('corpus_1.pkl', 'wb'))
+dictionary.save('dictionary_1.gensim')
 
 # Train LDA model
 from gensim.models import LdaModel
@@ -92,8 +92,8 @@ num_topics = 10 # find this number of topics in the data
 passes = 15
 
 ldamodel = LdaModel(corpus, num_topics = num_topics, id2word=dictionary, passes=passes)
-ldamodel.save('model5.gensim')
-topics = ldamodel.print_topics(num_words=3)
+ldamodel.save('model10_1.gensim')
+topics = ldamodel.print_topics(num_words=5)
 
 for topic in topics:
     print(topic)
