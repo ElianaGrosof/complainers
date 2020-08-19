@@ -80,7 +80,7 @@ def lda(clean_docs, model_name, topics):
     passes = 15
 
     ldamodel = LdaModel(corpus, num_topics = num_topics, id2word=dictionary, passes=passes)
-    ldamodel.save('model3_'+model_name+'.gensim')
+    ldamodel.save('model_'+model_name+'.gensim')
     topics = ldamodel.print_topics(num_words=5)
 
     for topic in topics:
@@ -89,12 +89,13 @@ def lda(clean_docs, model_name, topics):
 def main():
     # open csv file containing documents, clean document, add to all_docs list
     all_docs = []
-    model_name = 'body_title_081420'
+    model_name = 'body_title_3'
     topics = 3
     with open('data/complaints_body_title.csv') as f:
         for line in f:
             tokens = process_document(line)
-            all_docs.append(tokens)
+            if tokens:
+                all_docs.append(tokens)
 
     lda(all_docs, model_name, topics)
 
