@@ -13,6 +13,10 @@ Uses spaCY and NLTK packages.
 Will probably also combine title and body into one document.
 '''
 
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
 # import and load tools to get tokens of words
 from spacy.lang.en import English
 parser = English() # parser is same as nlp variable in spaCY documentation
@@ -68,6 +72,13 @@ def lda(clean_docs, model_name, topics):
     MmCorpus.serialize('corpus_'+model_name+'.mm', corpus)
     dictionary.save('dictionary_'+model_name+'.gensim')
 
+    '''
+    # pickle version: save dictionary and corpus for future use
+    import pickle
+    pickle.dump(corpus, open('corpus_body.pkl', 'wb'))
+    dictionary.save('dictionary_body.gensim')
+    '''
+
     # Train LDA model
     from gensim.models import LdaModel
     num_topics = topics # find this number of topics in the data
@@ -105,6 +116,8 @@ def lsi(clean_docs, model_name, topics):
     for topic in topics:
         print(topic)
 
+    return lsimodel, corpus
+
 def main():
     # open csv file containing documents, clean document, add to all_docs list
     all_docs = []
@@ -116,9 +129,6 @@ def main():
             if tokens:
                 all_docs.append(tokens)
 
-# Run LDA and LSI models
-    lda(all_docs, model_name, topics)
-    lsi(all_docs, model_name, topics)
-
+    lsimodel, corpus = lsi(all_docs, model_name, topics)
 
 main()

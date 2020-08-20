@@ -2,10 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56c6a6fb-62ba-4fc8-baae-e987873a30a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Visualizing LDA model-bodyANDtitle-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Visualizing LDA model-bodyANDtitle-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visualizing LDA model-bodyANDtitle.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizing LDA model-bodyANDtitle.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topic_modeling.py" beforeDir="false" afterPath="$PROJECT_DIR$/topic_modeling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/visualization-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/visualization-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_081420.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_081420.mm.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_081420.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_081420.mm.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_3.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_3.mm.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_7.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_body_title_7.mm.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_title_081420.mm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus_title_081420.mm.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionary_body_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionary_body_title_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionary_body_title_3.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionary_body_title_7.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionary_title_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_body_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_body_081420.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_body_081420.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_body_081420.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_title_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_title_081420.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_title_081420.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model10_title_081420.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model3_body_title_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model3_body_title_081420.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model3_body_title_081420.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model3_body_title_081420.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model7_body_title_081420.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model7_body_title_081420.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model7_body_title_081420.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model7_body_title_081420.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_3.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_3.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_3.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_3.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_7.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_7.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_7.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_body_title_7.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/corpus.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/corpus_body.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/corpus_title.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/dictionary.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/dictionary_body.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/dictionary_title.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_body.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_body.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_body.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_body.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_title.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_title.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_title.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model10_title.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model5.gensim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model5.gensim.expElogbeta.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model5.gensim.id2word" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model5.gensim.state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/visualization.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/tester.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -82,6 +137,11 @@
             <path>
               <item name="complainers" type="b2602c69:ProjectViewProjectNode" />
               <item name="complainers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="complainers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="complainers" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,7 +343,7 @@
     <entry file="file://$PROJECT_DIR$/tester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

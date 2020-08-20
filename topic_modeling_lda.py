@@ -68,6 +68,13 @@ def lda(clean_docs, model_name, topics):
     MmCorpus.serialize('corpus_'+model_name+'.mm', corpus)
     dictionary.save('dictionary_'+model_name+'.gensim')
 
+    '''
+    # pickle version: save dictionary and corpus for future use
+    import pickle
+    pickle.dump(corpus, open('corpus_body.pkl', 'wb'))
+    dictionary.save('dictionary_body.gensim')
+    '''
+
     # Train LDA model
     from gensim.models import LdaModel
     num_topics = topics # find this number of topics in the data
@@ -76,31 +83,6 @@ def lda(clean_docs, model_name, topics):
     ldamodel = LdaModel(corpus, num_topics = num_topics, id2word=dictionary, passes=passes)
     ldamodel.save('model_'+model_name+'.gensim')
     topics = ldamodel.print_topics(num_words=5)
-
-    for topic in topics:
-        print(topic)
-
-def lsi(clean_docs, model_name, topics):
-    from gensim import corpora
-    dictionary = corpora.Dictionary(clean_docs) # turn all data into a dictionary mappping of normalized words and their integer ids
-    # convert each document, called text, into bag-of-words representation (list of (token_id, token_count) tuples)
-    # in other words, it counts how often each word occurs in each doc of the text and saves that in the corpus
-    corpus = []
-    for doc in clean_docs:
-        corpus.append(dictionary.doc2bow(doc))
-
-    # serialize version: save dictionary and corpus for future use
-    from gensim.corpora import MmCorpus
-    MmCorpus.serialize('corpus_'+model_name+'.mm', corpus)
-    dictionary.save('dictionary_'+model_name+'.gensim')
-
-    # Train LSI model
-    from gensim.models import LsiModel
-    num_topics = topics # find this number of topics in the data
-
-    lsimodel = LsiModel(corpus, num_topics = num_topics, id2word=dictionary)
-    lsimodel.save('lsi_model_'+model_name+'.gensim')
-    topics = lsimodel.print_topics(num_words=5)
 
     for topic in topics:
         print(topic)
@@ -116,9 +98,6 @@ def main():
             if tokens:
                 all_docs.append(tokens)
 
-# Run LDA and LSI models
     lda(all_docs, model_name, topics)
-    lsi(all_docs, model_name, topics)
-
 
 main()
