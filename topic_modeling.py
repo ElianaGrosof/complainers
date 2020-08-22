@@ -1,8 +1,9 @@
 '''
 What Do People Complain About on the Internet?
 This is a script to find topics in the r/complaints subreddit.
-@author Eliana Grosof
-August 13, 2020
+
+Eliana Grosof
+August 13-20, 2020
 
 help from: https://towardsdatascience.com/topic-modelling-in-python-with-nltk-and-gensim-4ef03213cd21
 '''
@@ -55,8 +56,10 @@ def process_document(text):
 LDA with Gensim
 '''
 def lda(clean_docs, model_name, topics):
+    # turn all data into a dictionary mappping of normalized words and their integer ids
     from gensim import corpora
-    dictionary = corpora.Dictionary(clean_docs) # turn all data into a dictionary mappping of normalized words and their integer ids
+    dictionary = corpora.Dictionary(clean_docs)
+
     # convert each document, called text, into bag-of-words representation (list of (token_id, token_count) tuples)
     # in other words, it counts how often each word occurs in each doc of the text and saves that in the corpus
     corpus = []
@@ -79,10 +82,15 @@ def lda(clean_docs, model_name, topics):
 
     for topic in topics:
         print(topic)
-
+'''
+LSI with Gensim 
+'''
 def lsi(clean_docs, model_name, topics):
+
     from gensim import corpora
-    dictionary = corpora.Dictionary(clean_docs) # turn all data into a dictionary mappping of normalized words and their integer ids
+    # turn all data into a dictionary mappping of normalized words and their integer ids
+    dictionary = corpora.Dictionary(clean_docs)
+
     # convert each document, called text, into bag-of-words representation (list of (token_id, token_count) tuples)
     # in other words, it counts how often each word occurs in each doc of the text and saves that in the corpus
     corpus = []
@@ -116,7 +124,7 @@ def main():
             if tokens:
                 all_docs.append(tokens)
 
-# Run LDA and LSI models
+    # Run LDA and LSI models
     lda(all_docs, model_name, topics)
     lsi(all_docs, model_name, topics)
 

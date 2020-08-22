@@ -1,5 +1,5 @@
 '''
-This file is to scrape webpages from the r/complaints subreddit using the PRAW API.
+This file is scrapes webpages from the r/complaints subreddit using the PRAW API.
 '''
 
 import praw
@@ -29,8 +29,3 @@ for post in new_posts:
 posts = pd.DataFrame(posts,columns=['id', 'title', 'body', 'created_utc', 'score'])
 print(posts)
 posts.to_csv('complaints_new_13082020.csv') #note that file name is date in UTC
-
-# import pprint
-# for post in hot_posts:
-#     print(post.title)
-#     pprint.pprint(vars(post))
